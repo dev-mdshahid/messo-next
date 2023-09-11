@@ -2,26 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .bg-messo {
+    @apply bg-[#1f28eb];
   }
-}
+  .bg-messo-light {
+    @apply bg-[rgba(31,41,235,0.2)];
+  }
+  .border-messo {
+    @apply border-[#1f28eb];
+  }
+  .outline-messo {
+    @apply outline-[#1f28eb];
+  }
+  .text-messo {
+    @apply text-[#1f28eb];
+  }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .btn-primary {
+    @apply bg-messo text-white py-3 rounded mt-3;
+  }
+
+  h1 {
+    @apply font-semibold text-blue-900;
+  }
 }
